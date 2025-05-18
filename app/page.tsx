@@ -90,7 +90,8 @@ export default function LandingPage() {
             </Link>
           </div>
           <div className="flex flex-1 items-center justify-end space-x-4">
-            <nav className="flex items-center space-x-1 gap-5">
+            {/* Hide menu on mobile */}
+            <nav className="hidden sm:flex items-center space-x-1 gap-5">
               <button
                 onClick={() => scrollToSection("features")}
                 className="text-sm font-medium transition-colors hover:text-primary"
@@ -121,9 +122,10 @@ export default function LandingPage() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-[#0f1235]/80 to-[#1a1a2e]/90 backdrop-blur-sm">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px]">
+        <section className="w-full py-8 px-2 md:py-24 md:px-4 lg:py-32 xl:py-48 bg-gradient-to-b from-[#0f1235]/80 to-[#1a1a2e]/90 backdrop-blur-sm">
+          <div className="container px-0 md:px-6">
+            <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px] grid-cols-1">
+              {/* Responsive: stack on mobile, side-by-side on large screens */}
               <div
                 className={`flex flex-col justify-center space-y-4 transition-all duration-1000 ${isVisible.hero ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
               >
@@ -131,20 +133,20 @@ export default function LandingPage() {
                   <Badge className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80">
                     New Release
                   </Badge>
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-2xl sm:text-5xl font-bold tracking-tighter xl:text-6xl/none">
                     Make-it: Productivity & Study Companion
                   </h1>
-                  <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                  <p className="max-w-full text-muted-foreground md:text-xl">
                     Maximize Your Productivity. Master Your Studies.
                   </p>
                 </div>
-                <p className="max-w-[600px] text-muted-foreground">
+                <p className="max-w-full text-muted-foreground">
                   Your all-in-one productivity and study companion, crafted for students and professionals who want to
                   organize tasks, track progress, and achieve their goals.
                 </p>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row" id="download">
-                  <Button asChild className="group relative overflow-hidden bg-primary hover:bg-primary/90">
-                    <Link href="https://drive.google.com/file/d/1w4VSb2jLaf6NCZmZTTCcnsLqOMeChZBv/view?usp=drive_link">
+                <div className="flex flex-col gap-2 w-full min-[400px]:flex-row" id="download">
+                  <Button asChild className="group relative overflow-hidden bg-primary hover:bg-primary/90 w-full min-[400px]:w-auto">
+                    <Link href="https://www.upload-apk.com/hzfoPIWZNWOyeRZ">
                       <div className="absolute inset-0 w-3 bg-white/30 skew-x-[45deg] group-hover:transition-all group-hover:duration-500 group-hover:-translate-x-40 group-hover:skew-x-[45deg]" />
                       <Download className="mr-2 h-4 w-4" />
                       Download APK
@@ -153,7 +155,7 @@ export default function LandingPage() {
                   <Button
                     asChild
                     variant="outline"
-                    className="ml-0 mt-2 min-[400px]:mt-0 min-[400px]:ml-2 transition-all hover:scale-105"
+                    className="ml-0 mt-2 w-full min-[400px]:mt-0 min-[400px]:ml-2 min-[400px]:w-auto transition-all hover:scale-105"
                   >
                     <Link href="https://make-it-three.vercel.app/">
                       <span className="relative z-10">Try Web App</span>
@@ -172,16 +174,16 @@ export default function LandingPage() {
                 </div>
               </div>
               <div
-                className={`flex items-center justify-center transition-all duration-1000 ${isVisible.hero ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}
+                className={`flex items-center justify-center transition-all duration-1000 mt-8 lg:mt-0 ${isVisible.hero ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}
               >
-                <div className="relative">
+                <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg">
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 rounded-xl blur-xl opacity-75 animate-pulse animated-gradient"></div>
                   <Image
                     src="/productivity-app-interface.png"
                     alt="Make-it App Preview"
                     width={400}
                     height={500}
-                    className="rounded-xl shadow-lg relative z-10 hover:scale-105 transition-transform duration-300"
+                    className="rounded-xl shadow-lg relative z-10 hover:scale-105 transition-transform duration-300 w-full h-auto"
                   />
                 </div>
               </div>
@@ -413,25 +415,25 @@ export default function LandingPage() {
         >
           <div className="container px-4 md:px-6">
             <div
-              className={`grid gap-10 px-10 md:gap-16 lg:grid-cols-2 transition-all duration-1000 ${isVisible.cta ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+              className={`grid gap-6 sm:gap-8 md:gap-10 lg:gap-16 px-2 sm:px-4 md:px-6 grid-cols-1 lg:grid-cols-2 transition-all duration-1000 max-w-full overflow-hidden ${isVisible.cta ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
             >
-              <div className="space-y-4">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Ready to Get Started?</h2>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed">
+              <div className="space-y-4 max-w-full overflow-hidden">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter break-words">Ready to Get Started?</h2>
+                <p className="max-w-[600px] text-sm sm:text-base md:text-xl/relaxed text-muted-foreground">
                   Take control of your productivity and studies—download Make-it today!
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button asChild size="lg" className="group relative overflow-hidden bg-primary hover:bg-primary/90">
-                    <Link href="https://drive.google.com/file/d/1w4VSb2jLaf6NCZmZTTCcnsLqOMeChZBv/view?usp=drive_link">
+                  <Button asChild size="lg" className="group relative overflow-hidden bg-primary hover:bg-primary/90 w-full sm:w-auto">
+                    <Link href="https://www.upload-apk.com/hzfoPIWZNWOyeRZ">
                       <div className="absolute inset-0 w-3 bg-white/30 skew-x-[45deg] group-hover:transition-all group-hover:duration-500 group-hover:-translate-x-40 group-hover:skew-x-[45deg]" />
                       <Download className="mr-2 h-4 w-4" />
-                      Download APK
+                      <span className="whitespace-nowrap">Download APK</span>
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="transition-all hover:scale-105">
+                  <Button asChild variant="outline" size="lg" className="transition-all hover:scale-105 w-full sm:w-auto">
                     <Link href="https://github.com/ronak-kumar-sing/Make-it-app">
                       <Github className="mr-2 h-4 w-4" />
-                      View on GitHub
+                      <span className="whitespace-nowrap">View on GitHub</span>
                     </Link>
                   </Button>
                 </div>
@@ -494,7 +496,7 @@ export default function LandingPage() {
         <p className="text-xs text-muted-foreground">
           &copy; {new Date().getFullYear()} Make-it App. All rights reserved.
         </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+        <nav className="sm:ml-auto flex gap-4 sm:gap-6 flex-wrap">
           <Link href="#" className="text-xs hover:underline underline-offset-4">
             Terms of Service
           </Link>
