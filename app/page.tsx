@@ -144,7 +144,7 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row" id="download">
                   <Button asChild className="group relative overflow-hidden bg-primary hover:bg-primary/90">
-                    <Link href="/downloads/make-it-app.apk">
+                    <Link href="/make-it.apk">
                       <div className="absolute inset-0 w-3 bg-white/30 skew-x-[45deg] group-hover:transition-all group-hover:duration-500 group-hover:-translate-x-40 group-hover:skew-x-[45deg]" />
                       <Download className="mr-2 h-4 w-4" />
                       Download APK
@@ -155,7 +155,7 @@ export default function LandingPage() {
                     variant="outline"
                     className="ml-0 mt-2 min-[400px]:mt-0 min-[400px]:ml-2 transition-all hover:scale-105"
                   >
-                    <Link href="https://make-it-app.vercel.app">
+                    <Link href="https://make-it-three.vercel.app/">
                       <span className="relative z-10">Try Web App</span>
                     </Link>
                   </Button>
@@ -422,7 +422,7 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button asChild size="lg" className="group relative overflow-hidden bg-primary hover:bg-primary/90">
-                    <Link href="/downloads/make-it-app.apk">
+                    <Link href="/make-it.apk">
                       <div className="absolute inset-0 w-3 bg-white/30 skew-x-[45deg] group-hover:transition-all group-hover:duration-500 group-hover:-translate-x-40 group-hover:skew-x-[45deg]" />
                       <Download className="mr-2 h-4 w-4" />
                       Download APK
