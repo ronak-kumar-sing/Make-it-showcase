@@ -144,7 +144,7 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row" id="download">
                   <Button asChild className="group relative overflow-hidden bg-primary hover:bg-primary/90">
-                    <Link href="/make-it.apk">
+                    <Link href="https://drive.google.com/file/d/1w4VSb2jLaf6NCZmZTTCcnsLqOMeChZBv/view?usp=drive_link">
                       <div className="absolute inset-0 w-3 bg-white/30 skew-x-[45deg] group-hover:transition-all group-hover:duration-500 group-hover:-translate-x-40 group-hover:skew-x-[45deg]" />
                       <Download className="mr-2 h-4 w-4" />
                       Download APK
@@ -422,7 +422,7 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button asChild size="lg" className="group relative overflow-hidden bg-primary hover:bg-primary/90">
-                    <Link href="/make-it.apk">
+                    <Link href="https://drive.google.com/file/d/1w4VSb2jLaf6NCZmZTTCcnsLqOMeChZBv/view?usp=drive_link">
                       <div className="absolute inset-0 w-3 bg-white/30 skew-x-[45deg] group-hover:transition-all group-hover:duration-500 group-hover:-translate-x-40 group-hover:skew-x-[45deg]" />
                       <Download className="mr-2 h-4 w-4" />
                       Download APK
