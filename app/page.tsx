@@ -146,7 +146,7 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col gap-2 w-full min-[400px]:flex-row" id="download">
                   <Button asChild className="group relative overflow-hidden bg-primary hover:bg-primary/90 w-full min-[400px]:w-auto">
-                    <Link href="https://www.upload-apk.com/hzfoPIWZNWOyeRZ">
+                    <Link href="https://www.upload-apk.com/NJORU29J2acXseU">
                       <div className="absolute inset-0 w-3 bg-white/30 skew-x-[45deg] group-hover:transition-all group-hover:duration-500 group-hover:-translate-x-40 group-hover:skew-x-[45deg]" />
                       <Download className="mr-2 h-4 w-4" />
                       Download APK
@@ -158,7 +158,12 @@ export default function LandingPage() {
                     className="ml-0 mt-2 w-full min-[400px]:mt-0 min-[400px]:ml-2 min-[400px]:w-auto transition-all hover:scale-105"
                   >
                     <Link href="https://make-it-three.vercel.app/">
-                      <span className="relative z-10">Try Web App</span>
+                      <span className="relative z-10 flex flex-col items-center">
+                        Try Web App
+                        <span className="mt-1 px-2 py-0.5 rounded-full bg-yellow-400 text-xs font-semibold text-black animate-pulse shadow-md">
+                          Coming Soon / Under Construction
+                        </span>
+                      </span>
                     </Link>
                   </Button>
                 </div>
@@ -424,7 +429,7 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Button asChild size="lg" className="group relative overflow-hidden bg-primary hover:bg-primary/90 w-full sm:w-auto">
-                    <Link href="https://www.upload-apk.com/hzfoPIWZNWOyeRZ">
+                    <Link href="https://www.upload-apk.com/NJORU29J2acXseU">
                       <div className="absolute inset-0 w-3 bg-white/30 skew-x-[45deg] group-hover:transition-all group-hover:duration-500 group-hover:-translate-x-40 group-hover:skew-x-[45deg]" />
                       <Download className="mr-2 h-4 w-4" />
                       <span className="whitespace-nowrap">Download APK</span>
@@ -503,7 +508,7 @@ export default function LandingPage() {
           <Link href="#" className="text-xs hover:underline underline-offset-4">
             Privacy Policy
           </Link>
-          <Link href="mailto:example@email.com" className="text-xs hover:underline underline-offset-4">
+          <Link href="mailto:ronakkumar20062006@gmail.com" className="text-xs hover:underline underline-offset-4">
             Contact Support
           </Link>
         </nav>

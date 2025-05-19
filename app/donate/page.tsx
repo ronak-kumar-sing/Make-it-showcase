@@ -190,7 +190,7 @@ export default function DonatePage() {
                         <div className="flex items-center mt-3">
                           <Input
                             id="upi-id"
-                            value="example@upi"
+                            value="7009097789@ybl"
                             readOnly
                             className="bg-background/50 text-center text-base py-6"
                           />
@@ -199,7 +199,7 @@ export default function DonatePage() {
                             variant="outline"
                             className="ml-3 h-[52px] px-6"
                             onClick={() => {
-                              navigator.clipboard.writeText("example@upi")
+                              navigator.clipboard.writeText("7009097789@ybl")
                               alert("UPI ID copied to clipboard!")
                             }}
                           >
